@@ -1,0 +1,70 @@
+body {
+    height: 100vh;
+    background-color: aqua;
+    font-family: 'poppins',Arial;
+    margin: 0;
+    display: grid;
+    place-content: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 62%;
+    background-color: #ffff;
+    height: 100vh;
+    z-index: -7;
+}
+
+.card {
+    width: 30%;
+    margin: 0 auto;
+    min-width: 500px;
+    padding: 3em;
+    cursor: pointer;
+    position: relative;
+}
+
+.card::before,.card::after {
+    position: absolute;
+    content: " ";
+    top:0;
+    right:0;
+    background-color: blueviolet;
+    height: 300px;
+    z-index: -1;
+    width: 34%;
+
+}
+
+.card::after {
+    width: 0;
+    left: 0;
+    background-color: cadetblue;
+    z-index: -1;
+    
+
+}
+
+p {
+    font-size: .9em;
+    line-height: 1.6;
+    color:#fff;
+    clip-path: circle(0% at 100% 0);
+    margin: 0;
+    padding: 1.5em 0 0 3em;
+    position: relative;
+    transform: translateX(20px);
+}
+
+p::before {
+    position: absolute;
+    content: " ";
+    height: 80%;
+    background-color: chartreuse;
+    top: 2em;
+    left: 0;
+    width: 5px;
+}
